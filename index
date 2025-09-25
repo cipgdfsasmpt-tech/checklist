@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checklist de Veículos da CIPGd-FSA</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+  <div class="max-w-2xl w-full bg-white shadow-lg rounded-xl p-6">
+    <h1 class="text-2xl font-bold text-center mb-4">Checklist de Veículos da CIPGd-FSA</h1>
+
+    <form id="checklistForm" class="space-y-4">
+      <!-- Data e hora automáticos -->
+      <div>
+        <label class="block font-medium">Data e Hora</label>
+        <input type="text" id="DataHora" readonly class="w-full border rounded p-2" required>
+      </div>
+
+      <!-- Nome -->
+      <div>
+        <label class="block font-medium">Nome</label>
+        <input type="text" id="Nome" class="w-full border rounded p-2" required>
+      </div>
+
+      <!-- Graduação -->
+      <div>
+        <label class="block font-medium">Graduação</label>
+        <select id="Graduacao" class="w-full border rounded p-2" required>
+          <option value="">Selecione</option>
+          <option value="SD">SD</option>
+          <option value="CB">CB</option>
+          <option value="SGT">SGT</option>
+          <option value="ST">ST</option>
+        </select>
+      </div>
+
+      <!-- Cadastro -->
+      <div>
+        <label class="block font-medium">Cadastro</label>
+        <input type="text" id="Cadastro" class="w-full border rounded p-2" required>
+      </div>
+
+      <!-- Comandante -->
+      <div>
+        <label class="block font-medium">Nome do Comandante</label>
+        <input type="text" id="Comandante" class="w-full border rounded p-2" required>
+      </div>
+
+      <!-- Km inicial -->
+      <div>
+        <label class="block font-medium">Km inicial</label>
+        <input type="number" id="Km_inicial" class="w-full border rounded p-2" required>
+      </div>
+
+      <!-- Prefixo -->
+      <div>
+        <label class="block font-medium">Prefixo</label>
+        <select id="Prefixo" class="w-full border rounded p-2" required>
+          <option value="">Selecione</option>
+          <option>VTR-Atalaia 01</option>
+          <option>VTR-Atalaia 02</option>
+          <option>VTR-Atalaia 03</option>
+          <option>VTR-Atalaia 04</option>
+          <option>VTR-Atalaia 05</option>
+          <option>VTR-RESERVA</option>
+        </select>
+      </div>
+
+      <!-- Níveis -->
+      <div>
+        <label class="block font-medium">Nível do Óleo</label>
+        <select id="Oleo" class="w-full border rounded p-2" required>
+          <option value="">Selecione</option>
+          <option>OK</option>
+          <option>Baixo</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="block font-medium">Nível da Água</label>
+        <select id="Agua" class="w-full border rounded p-2" required>
+          <option value="">Selecione</option>
+          <option>OK</option>
+          <option>Baixo</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="block font-medium">Nível do Combustível</label>
+        <select id="Combustivel" class="w-full border rounded p-2" required>
+          <option value="">Selecione</option>
+          <option>1/4</option>
+          <option>2/4</option>
+          <option>3/4</option>
+          <option>Cheio</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="block font-medium">Fluido de Freio</label>
+        <select id="Freio" class="w-full border rounded p-2" required>
+          <option value="">Selecione</option>
+          <option>OK</option>
+          <option>Baixo</option>
+        </select>
+      </div>
+
+      <!-- Demais itens -->
+      <div>
+        <label class="block font-medium">Chaparia</label>
+        <select id="Chaparia" class="w-full border rounded p-2" required>
+          <option value="">Selecione</option>
+          <option>OK</option>
+          <option>Com Avarias</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="block font-medium">Plotagem</label>
+        <select id="Plotagem" class="w-full border rounded p-2" required>
+          <option value="">Selecione</option>
+          <option>OK</option>
+          <option>Danificada</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="block font-medium">Faróis e Setas</label>
+        <select id="Farois" class="w-full border rounded p-2" required>
+          <option value="">Selecione</option>
+          <option>OK</option>
+          <option>Defeito</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="block font-medium">Giroflex</label>
+        <select id="Giroflex" class="w-full border rounded p-2" required>
+          <option value="">Selecione</option>
+          <option>OK</option>
+          <option>Defeito</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="block font-medium">Estofados</label>
+        <select id="Estofados" class="w-full border rounded p-2" required>
+          <option value="">Selecione</option>
+          <option>OK</option>
+          <option>Danificado</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="block font-medium">Chave de rodas e Macaco</label>
+        <select id="Ferramentas" class="w-full border rounded p-2" required>
+          <option value="">Selecione</option>
+          <option>OK</option>
+          <option>Faltando</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="block font-medium">Pneus e Estepe</label>
+        <select id="Pneus" class="w-full border rounded p-2" required>
+          <option value="">Selecione</option>
+          <option>OK</option>
+          <option>Danificado</option>
+        </select>
+      </div>
+
+      <!-- Observações -->
+      <div>
+        <label class="block font-medium">Observações</label>
+        <textarea id="Observacoes" class="w-full border rounded p-2"></textarea>
+      </div>
+
+      <!-- Botão -->
+      <div class="flex flex-col space-y-2">
+        <button id="whatsBtn" type="submit" class="bg-green-600 text-white p-2 rounded">Enviar via WhatsApp</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    // Preenche data e hora automaticamente
+    document.getElementById("DataHora").value = new Date().toLocaleString("pt-BR");
+
+    // Detecta se é iPhone/iPad e muda o texto do botão
+    const isIphone = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+    const btn = document.getElementById("whatsBtn");
+    if (isIphone) {
+      btn.textContent = "Enviar via WhatsApp (iPhone)";
+    }
+
+    document.getElementById("checklistForm").addEventListener("submit", function(e){
+      e.preventDefault();
+
+      const dados = {};
+      const form = e.target;
+      for (let element of form.elements) {
+        if (element.id && element.value) {
+          dados[element.id] = element.value;
+        }
+      }
+
+      // 1) Enviar para Google Sheets
+      const formData = new FormData();
+      for (const campo in dados) {
+        formData.append(campo, dados[campo]);
+      }
+
+      fetch("https://script.google.com/macros/s/AKfycbw5AkFln4F18me-S32jrq6AJVamCzoz_JVDvQwYJFbkIRjgmRDWrLkUcOea0bQjOjdv/exec", {
+        method: "POST",
+        body: formData
+      })
+      .then(res => res.text())
+      .then(retorno => {
+        console.log("Resposta do Google Sheets:", retorno);
+        alert("✅ Checklist registrado na planilha com sucesso!");
+      })
+      .catch(err => alert("⚠️ Erro ao enviar para planilha: " + err));
+
+      // 2) Montar mensagem para WhatsApp
+      let mensagem = `🚓 *Checklist Viatura da CIPGd-FSA* 🚓%0A%0A`;
+      mensagem += `📅 *Data/Hora:* ${dados.DataHora}%0A`;
+      mensagem += `👤 *Nome:* ${dados.Nome}%0A`;
+      mensagem += `🎖️ *Graduação:* ${dados.Graduacao}%0A`;
+      mensagem += `🆔 *Cadastro:* ${dados.Cadastro}%0A`;
+      mensagem += `🧑‍✈️ *Comandante:* ${dados.Comandante}%0A`;
+      mensagem += `📍 *Prefixo:* ${dados.Prefixo}%0A`;
+      mensagem += `📊 *Km Inicial:* ${dados.Km_inicial}%0A%0A`;
+
+      mensagem += `🛠️ *Itens Verificados*%0A`;
+      mensagem += `• Nível do Óleo: ${dados.Oleo}%0A`;
+      mensagem += `• Nível da Água: ${dados.Agua}%0A`;
+      mensagem += `• Combustível: ${dados.Combustivel}%0A`;
+      mensagem += `• Fluido de Freio: ${dados.Freio}%0A`;
+      mensagem += `• Chaparia: ${dados.Chaparia}%0A`;
+      mensagem += `• Plotagem: ${dados.Plotagem}%0A`;
+      mensagem += `• Faróis/Setas: ${dados.Farois}%0A`;
+      mensagem += `• Giroflex: ${dados.Giroflex}%0A`;
+      mensagem += `• Estofados: ${dados.Estofados}%0A`;
+      mensagem += `• Chave de rodas e Macaco: ${dados.Ferramentas}%0A`;
+      mensagem += `• Pneus/Estepe: ${dados.Pneus}%0A%0A`;
+
+      // Observações formatadas
+      let observacoesFormatadas = dados.Observacoes
+        .split("\n")
+        .map(linha => linha.trim() ? `. ${linha.trim()}` : "")
+        .join("%0A");
+
+      mensagem += `📝 *Observações:*%0A${observacoesFormatadas}%0A%0A`;
+
+      mensagem += `🚓🛠️ *Revisões: Atalaia 01: 20.000 / Atalaia 02: 40.000 / Atalaia 05: 106.000*%0A`;
+
+      // 3) Abrir WhatsApp (dinâmico)
+      const url = `https://wa.me/?text=${mensagem}`;
+      if (isIphone) {
+        window.location.href = url; // iPhone
+      } else {
+        window.open(url, "_blank"); // Android/PC
+      }
+    });
+  </script>
+</body>
+</html>
